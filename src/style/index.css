@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+
+.book:hover{
+  animation-name: book-enlarge;
+  animation-duration: 5s;
+  cursor:pointer;
+  transition:2s;
+  /* transform: rotate(180deg); */
+  /* transform: skewY(180deg); */
+
+
+}
+
+.
+@keyframes book-enlarge {
+  0%{
+    background:none;
+  }
+  100%{
+    /* grid-column: span 2; */
+
+  }
+}
