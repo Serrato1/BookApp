@@ -81,3 +81,13 @@ export function authenticateLogin(username,password){
       })
   }
 }
+
+export const LOGOUT = "LOGOUT"
+export function logout(username,password){
+  return (dispatch) =>{
+      console.log('Received LOGOUT Action\nUsername: ',username,"\nPassword: ",password);
+      dispatch({
+        type: LOGOUT
+      })
+  }
+}

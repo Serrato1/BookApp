@@ -3,7 +3,7 @@
 
 
 import {combineReducers} from 'redux'
-import {FETCH_BOOKS, ADD_BOOK,REMOVE_BOOK,MARK_BOOK ,   SEARCH_BOOK  ,  AUTHENTICATE} from '../actions'
+import {FETCH_BOOKS, ADD_BOOK,REMOVE_BOOK,MARK_BOOK ,   SEARCH_BOOK  ,  AUTHENTICATE  ,   LOGOUT} from '../actions'
 
 function books(state = [], action){
   switch(action.type){
@@ -48,6 +48,8 @@ function authState(state = false,action){
   switch(action.type){
     case AUTHENTICATE:
       return true
+    case LOGOUT:
+      return false
     default:
       return false
   }
