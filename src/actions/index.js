@@ -70,3 +70,14 @@ export function searchBook(searchTerm){
       })
   }
 }
+export const AUTHENTICATE = "AUTHENTICATE"
+export function authenticateLogin(username,password){
+  return (dispatch) =>{
+      console.log('Received Authentication Action\nUsername: ',username,"\nPassword: ",password);
+      dispatch({
+        type: AUTHENTICATE,
+        userName: username ,
+        password: password
+      })
+  }
+}
