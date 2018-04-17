@@ -18,7 +18,6 @@ class BookList extends Component{
         return <Book key={indx} book={book} ></Book>
       })
     }
-
     return(
       <div className="col-sz-6 grid-col-2 grid-row-2">
         <div className="col-sz-2 grid-col-4 grid-row-5 grid-gap-strong">

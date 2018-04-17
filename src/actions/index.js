@@ -23,20 +23,32 @@ export function fetchBooks(){
 export function addBook(bookObj){
   return (dispatch) =>{
       console.log('Received Action addBook. Adding Book : ' , bookObj);
-      dispatch({
-        type: ADD_BOOK,
-        book: bookObj
+      axios.post('http://localhost:8082/api/books',{
+        ...bookObj
       })
+      .then((resp)=>{
+        console.log('Post Response : ',resp);
+        dispatch({
+          type: ADD_BOOK,
+          book: bookObj
+        })
+      })
+
   }
 }
 
 export function removeBook(bookId){
   return (dispatch) =>{
       console.log('Received Action addBook. Adding Book : ' , bookId);
-      dispatch({
-        type: REMOVE_BOOK,
-        bookId: bookId
+      axios.delete(`http://localhost:8082/api/books/${bookId}`)
+      .then((resp)=>{
+        console.log("Delete Response : ", resp);
+        dispatch({
+          type: REMOVE_BOOK,
+          bookId: bookId
+        })
       })
+
   }
 }
 
