@@ -14,7 +14,7 @@ import {Route} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 const history = createBrowserHistory();
 
-store.dispatch(fetchBooks())
+store.dispatch(fetchBooks());
 // let loggedIn = this.props.authState;
 console.log('store ',store.getState());
 ReactDOM.render(
